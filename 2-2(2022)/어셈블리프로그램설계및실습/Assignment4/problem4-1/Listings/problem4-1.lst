@@ -1,0 +1,77 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ARMex, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         start
+    4 00000000 E59F0034        ldr              r0, tempaddr
+    5 00000004 E3A01001        mov              r1, #1      ; r1 = 1
+    6 00000008 E0822081        add              r2, r1, lsl #1 
+                                                            ; r2 = 1*2 = 2 = 2!
+                                                            
+    7 0000000C E0823082        add              r3, r2, r2, lsl #1 ; r3 = 2 + 2
+                                                            *2 = 6 = 3!
+    8 00000010 E1A04103        mov              r4, r3, lsl #2 ; r4 = 6*4 = 24 
+                                                            = 4!
+    9 00000014 E0845104        add              r5, r4, r4, lsl #2 ; r5 = 24 + 
+                                                            24*4 = 120 = 5!
+   10 00000018 E0856105        add              r6, r5, r5, lsl #2 ; r6 = 120 +
+                                                             120*4 = 600
+   11 0000001C E0866005        add              r6, r6, r5  ; r6 = 600 + 120 = 
+                                                            720;
+   12 00000020 E0667186        rsb              r7, r6, r6, lsl #3 
+                                                            ; r7 = 5040 = 7!
+   13 00000024 E0888187        add              r8, r7, lsl #3 
+                                                            ; r8 = 40320 = 8!
+   14 00000028 E0889188        add              r9, r8, r8, lsl #3 
+                                                            ; r9 = 362880 = 9!
+   15 0000002C E089A189        add              r10, r9, r9, lsl #3 
+                                                            ; r10 = 3265920
+   16 00000030 E08AA009        add              r10, r10, r9 ; r10 = 3628800
+   17 00000034         
+   18 00000034 E580A000        str              r10, [r0]
+   19 00000038         
+   20 00000038 E1A0F00E        mov              pc, lr
+   21 0000003C 00040000 
+                       tempaddr
+                               &                &40000
+   22 00000040                 end
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\problem4-1.d -o.\objects\problem4-1.o -IC:\Keil_v5\ARM\RV31\
+INC -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__U
+VISION_VERSION SETA 529" --list=.\listings\problem4-1.lst problem4-1.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARMex 00000000
+
+Symbol: ARMex
+   Definitions
+      At line 1 in file problem4-1.s
+   Uses
+      None
+Comment: ARMex unused
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 3 in file problem4-1.s
+   Uses
+      None
+Comment: start unused
+tempaddr 0000003C
+
+Symbol: tempaddr
+   Definitions
+      At line 21 in file problem4-1.s
+   Uses
+      At line 4 in file problem4-1.s
+Comment: tempaddr used once
+3 symbols
+335 symbols in table

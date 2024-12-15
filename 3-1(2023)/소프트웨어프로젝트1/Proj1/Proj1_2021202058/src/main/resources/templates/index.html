@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .item h3 {
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .btn-container {
+            margin-top: 20px;
+        }
+
+        .btn-container a,
+        .btn-container button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-container a:hover,
+        .btn-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <table>
+        <tr>
+            <th>번호</th>
+            <th>이미지</th>
+            <th>제목</th>
+        </tr>
+        <tr th:each="post, index : ${postList}">
+            <td th:text="${index.index + 1}"></td>
+            <td class="item">
+                <a th:href="@{'/post/' + ${post.id}}">
+                    <img th:src="@{${post.origFilename}}" alt="Image 1">
+                </a>
+            </td>
+            <td>
+                <h3>
+                    <a th:href="@{'/post/' + ${post.id}}">
+                        <span th:text="${post.title}"></span>
+                    </a>
+                </h3>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="btn-container">
+    <a class="btn btn-primary" href="/post" role="button">글쓰기</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+Warning (10268): Verilog HDL information at BUS.v(18): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/assignment/Project_2_2021202058/Top/BUS.v Line: 18
+Warning (10273): Verilog HDL warning at ram.v(29): extended using "x" or "z" File: C:/intelFPGA_lite/18.1/assignment/Project_2_2021202058/Top/ram.v Line: 29
+Warning (10268): Verilog HDL information at bus_arbit.v(5): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/assignment/Project_2_2021202058/Top/bus_arbit.v Line: 5
+Warning (10273): Verilog HDL warning at mux.v(15): extended using "x" or "z" File: C:/intelFPGA_lite/18.1/assignment/Project_2_2021202058/Top/mux.v Line: 15
+Warning (10273): Verilog HDL warning at alu32.v(24): extended using "x" or "z" File: C:/intelFPGA_lite/18.1/assignment/Project_2_2021202058/Top/alu32.v Line: 24
+Warning (10273): Verilog HDL warning at multiplier.v(73): extended using "x" or "z" File: C:/intelFPGA_lite/18.1/assignment/Project_2_2021202058/Top/multiplier.v Line: 73
+Warning (10273): Verilog HDL warning at multiplier.v(98): extended using "x" or "z" File: C:/intelFPGA_lite/18.1/assignment/Project_2_2021202058/Top/multiplier.v Line: 98
+Warning (10273): Verilog HDL warning at multiplier.v(99): extended using "x" or "z" File: C:/intelFPGA_lite/18.1/assignment/Project_2_2021202058/Top/multiplier.v Line: 99
+Warning (10273): Verilog HDL warning at multiplier.v(100): extended using "x" or "z" File: C:/intelFPGA_lite/18.1/assignment/Project_2_2021202058/Top/multiplier.v Line: 100
+Warning (10273): Verilog HDL warning at multiplier.v(101): extended using "x" or "z" File: C:/intelFPGA_lite/18.1/assignment/Project_2_2021202058/Top/multiplier.v Line: 101
+Warning (10273): Verilog HDL warning at _8_to_1_MUX.v(17): extended using "x" or "z" File: C:/intelFPGA_lite/18.1/assignment/Project_2_2021202058/Top/_8_to_1_MUX.v Line: 17

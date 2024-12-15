@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <title>게시판 - 글쓰기</title>
+  <link rel="stylesheet" href="/webjars/bootstrap/4.5.0/css/bootstrap.min.css" />
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .table {
+      border-collapse: collapse;
+    }
+
+    .table th,
+    .table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    .table th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <form action="/post" method="post" enctype="multipart/form-data">
+    <table class="table">
+      <tbody>
+      <tr>
+        <th scope="row"><label for="inputTitle"><strong>제목</strong></label></th>
+        <td>
+          <input type="text" name="title" class="form-control" id="inputTitle" />
+        </td>
+      </tr>
+      <tr>
+        <th scope="row"><label for="inputContent"><strong>내용</strong></label></th>
+        <td>
+          <textarea type="text" name="content" class="form-control" id="inputContent"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row"><label for="inputFile"><strong>첨부 파일</strong></label></th>
+        <td>
+          <div id="inputFile">
+            <input name="file" type="file" id="file" />
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="row">
+      <div class="col-auto mr-auto"></div>
+      <div class="col-auto">
+        <input class="btn btn-primary" type="submit" role="button" value="글쓰기" />
+      </div>
+    </div>
+  </form>
+</div>
+<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
+<script src="/webjars/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

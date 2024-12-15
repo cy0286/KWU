@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Upload"
+    android:orientation="vertical">
+
+    <!-- 뒤로가기 버튼 -->
+    <Button
+        android:id = "@+id/Return"
+        android:layout_gravity="left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="뒤로가기"
+        android:textColor="#000000"
+        android:background="#00000000" />
+
+    <!-- 제목 입력란 -->
+    <EditText
+        android:id = "@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- 내용 입력 -->
+    <EditText
+        android:id = "@+id/Content"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+
+    <!-- 이미지 표시 영역 -->
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/camera" />
+
+    <!-- 업로드 버튼 -->
+    <Button
+        android:id = "@+id/Post"
+        android:layout_gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="업로드"
+        android:textColor="#000000"
+        android:background="#00000000" />
+</LinearLayout>

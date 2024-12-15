@@ -1,0 +1,108 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ARMex, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         
+    4 00000000         start
+    5 00000000         ;unrolling
+    6 00000000 E59F0080        LDR              r0, Address1 ;load address1 int
+                                                            o r0
+    7 00000004 E59F1080        LDR              r1, =Arr1   ;load arr1 to r1
+    8 00000008         
+    9 00000008 E4913004        LDR              r3,[r1],#4  ;load data into r3
+   10 0000000C E0822003        ADD              r2,r2,r3    ;r2=r2+r3
+   11 00000010 E4913004        LDR              r3,[r1],#4
+   12 00000014 E0822003        ADD              r2,r2,r3
+   13 00000018 E4913004        LDR              r3,[r1],#4
+   14 0000001C E0822003        ADD              r2,r2,r3
+   15 00000020 E4913004        LDR              r3,[r1],#4
+   16 00000024 E0822003        ADD              r2,r2,r3
+   17 00000028 E4913004        LDR              r3,[r1],#4
+   18 0000002C E0822003        ADD              r2,r2,r3
+   19 00000030 E4913004        LDR              r3,[r1],#4
+   20 00000034 E0822003        ADD              r2,r2,r3
+   21 00000038 E4913004        LDR              r3,[r1],#4
+   22 0000003C E0822003        ADD              r2,r2,r3
+   23 00000040 E4913004        LDR              r3,[r1],#4
+   24 00000044 E0822003        ADD              r2,r2,r3
+   25 00000048 E4913004        LDR              r3,[r1],#4
+   26 0000004C E0822003        ADD              r2,r2,r3
+   27 00000050 E4913004        LDR              r3,[r1],#4
+   28 00000054 E0822003        ADD              r2,r2,r3
+   29 00000058 E5802000        STR              r2,[r0]     ;store r2 into r0
+   30 0000005C         
+   31 0000005C         endline
+   32 0000005C E1A0F00E        MOV              pc, lr      ;go to first instru
+                                                            ction
+   33 00000060         
+   34 00000060 0000000B 
+              0000000D 
+              0000000F 
+              00000011 
+              00000013 
+              00000015 
+              00000017 
+              00000019 
+              0000001B 
+              0000001D Arr1    DCD              11,13,15,17,19,21,23,25,27,29
+   35 00000088 00004000 
+                       Address1
+                               &                &4000       ;memory address
+   36 0000008C                 END                          ;Mark end of file
+              00000000 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\problem3-3-3.d -o.\objects\problem3-3-3.o -IC:\Keil_v5\ARM\R
+V31\INC -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine=
+"__UVISION_VERSION SETA 529" --list=.\listings\problem3-3-3.lst problem3-3-3.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARMex 00000000
+
+Symbol: ARMex
+   Definitions
+      At line 1 in file problem3-3-3.s
+   Uses
+      None
+Comment: ARMex unused
+Address1 00000088
+
+Symbol: Address1
+   Definitions
+      At line 35 in file problem3-3-3.s
+   Uses
+      At line 6 in file problem3-3-3.s
+Comment: Address1 used once
+Arr1 00000060
+
+Symbol: Arr1
+   Definitions
+      At line 34 in file problem3-3-3.s
+   Uses
+      At line 7 in file problem3-3-3.s
+Comment: Arr1 used once
+endline 0000005C
+
+Symbol: endline
+   Definitions
+      At line 31 in file problem3-3-3.s
+   Uses
+      None
+Comment: endline unused
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 4 in file problem3-3-3.s
+   Uses
+      None
+Comment: start unused
+5 symbols
+339 symbols in table

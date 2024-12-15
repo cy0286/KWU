@@ -1,0 +1,3 @@
+Warning (10273): Verilog HDL warning at mux.v(36): extended using "x" or "z" File: C:/intelFPGA_lite/18.1/assignment/2_2021202058_Assignment_11/bus/mux.v Line: 36
+Info (10281): Verilog HDL Declaration information at bus_arbit.v(3): object "m0_grant" differs only in case from object "M0_Grant" in the same scope File: C:/intelFPGA_lite/18.1/assignment/2_2021202058_Assignment_11/bus/bus_arbit.v Line: 3
+Info (10281): Verilog HDL Declaration information at bus_arbit.v(3): object "m1_grant" differs only in case from object "M1_Grant" in the same scope File: C:/intelFPGA_lite/18.1/assignment/2_2021202058_Assignment_11/bus/bus_arbit.v Line: 3

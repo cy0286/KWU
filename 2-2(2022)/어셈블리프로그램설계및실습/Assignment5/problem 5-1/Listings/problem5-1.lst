@@ -1,0 +1,89 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ARMex, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         Start
+    4 00000000 E59FD028        LDR              sp, Address1 
+                                                            ;set start address 
+                                                            
+    5 00000004 E3A00001        MOV              r0, #1      ;store 1 to r0
+    6 00000008 E3A01001        MOV              r1, #1      ;store 1 to r1
+    7 0000000C E3A0200B        MOV              r2, #11     ;store 11 to r2(com
+                                                            pare)
+    8 00000010         
+    9 00000010         Factorial
+   10 00000010 E0030190        MUL              r3, r0, r1  ;r3 = r0 * r1
+   11 00000014 E2800001        ADD              r0, r0, #1  ;r0 = r0 + 1
+   12 00000018 E1A01003        MOV              r1, r3
+   13 0000001C         
+   14 0000001C E1500002        CMP              r0, r2
+   15 00000020         
+   16 00000020 1AFFFFFA        BNE              Factorial   ;r0!=11 go to Facto
+                                                            rial
+   17 00000024 0AFFFFFF        BEQ              Done        ;r0=11 go to Done
+   18 00000028         
+   19 00000028         Done
+   20 00000028 E88D0008        STMEA            sp, {r3}    ;store r3 to stack
+   21 0000002C E3A0F000        MOV              pc, #0      ;end
+   22 00000030         
+   23 00000030 00040000 
+                       Address1
+                               &                &40000      ;stack start addres
+                                                            s
+   24 00000034                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\problem5-1.d -o.\objects\problem5-1.o -IC:\Keil_v5\ARM\RV31\
+INC -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__U
+VISION_VERSION SETA 529" --list=.\listings\problem5-1.lst problem5-1.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARMex 00000000
+
+Symbol: ARMex
+   Definitions
+      At line 1 in file problem5-1.s
+   Uses
+      None
+Comment: ARMex unused
+Address1 00000030
+
+Symbol: Address1
+   Definitions
+      At line 23 in file problem5-1.s
+   Uses
+      At line 4 in file problem5-1.s
+Comment: Address1 used once
+Done 00000028
+
+Symbol: Done
+   Definitions
+      At line 19 in file problem5-1.s
+   Uses
+      At line 17 in file problem5-1.s
+Comment: Done used once
+Factorial 00000010
+
+Symbol: Factorial
+   Definitions
+      At line 9 in file problem5-1.s
+   Uses
+      At line 16 in file problem5-1.s
+Comment: Factorial used once
+Start 00000000
+
+Symbol: Start
+   Definitions
+      At line 3 in file problem5-1.s
+   Uses
+      None
+Comment: Start unused
+5 symbols
+337 symbols in table

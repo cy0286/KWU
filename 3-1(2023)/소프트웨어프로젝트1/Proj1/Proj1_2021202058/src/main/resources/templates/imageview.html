@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <title>게시판 - 수정하기 </title>
+  <link rel="stylesheet" href="/webjars/bootstrap/4.5.0/css/bootstrap.min.css" />
+  <style>
+    .table-bordered th,
+    .table-bordered td {
+      border: 1px solid #dee2e6;
+    }
+
+    .center-table {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+<div class="container d-flex justify-content-between">
+  <a href="/">
+    <strong>뒤로가기</strong>
+  </a>
+</div>
+<div class="container center-table">
+  <form th:action="@{'/post/edit/' + ${post.id}}" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="_method" value="put" />
+    <input type="hidden" name="id" th:value="${post.id}" />
+    <table class="table table-bordered">
+      <tbody>
+      <tr>
+        <th scope="row">제목</th>
+        <td>
+          <input type="text" name="title" class="form-control" th:value="${post.title}" />
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">내용</th>
+        <td>
+          <textarea type="text" name="content" class="form-control" rows="5" th:value="${post.content}"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">첨부 파일</th>
+        <td>
+          <input name="file" type="file" class="form-control-file" />
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="row">
+      <div class="col-auto ml-auto">
+        <button class="btn btn-primary" type="submit" role="button">수정</button>
+      </div>
+    </div>
+  </form>
+</div>
+<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
+<script src="/webjars/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

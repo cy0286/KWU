@@ -1,0 +1,116 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ARMex, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         start
+    4 00000000 E59F0044        LDR              r0, Address1 ;load address1 int
+                                                            o r0
+    5 00000004 E59F1044        LDR              r1, = Arr1  ;load the Arr1
+    6 00000008 E4912024        LDR              r2, [r1], #36 ;store form the b
+                                                            ack
+    7 0000000C         
+    8 0000000C         loop
+    9 0000000C E4112004        LDR              r2, [r1], #-4 ;load array from 
+                                                            the back
+   10 00000010 E4C02001        STRB             r2, [r0], #1 ;sotre r2 into r0
+   11 00000014 E352000A        CMP              r2, #10     ;compare r2 for che
+                                                            ck the program is e
+                                                            nd
+   12 00000018         
+   13 00000018         end
+   14 00000018 0A000000        BEQ              finish      ;if  r2 == 10 go to
+                                                             finish
+   15 0000001C 1AFFFFFA        BNE              loop        ;if r2 != 10 go to 
+                                                            loop
+   16 00000020         
+   17 00000020         finish
+   18 00000020 E1A0F00E        MOV              pc, lr      ;go to first instru
+                                                            ction
+   19 00000024         
+   20 00000024 0000000A 
+              00000009 
+              00000008 
+              00000007 
+              00000006 
+              00000005 
+              00000004 
+              00000003 
+              00000002 
+              00000001 Arr1    DCD              10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+   21 0000004C 00004000 
+                       Address1
+                               &                &4000       ;memory address
+   22 00000050                 END                          ;Mark end of file
+              00000000 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\problem3-2.d -o.\objects\problem3-2.o -IC:\Keil_v5\ARM\RV31\
+INC -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__U
+VISION_VERSION SETA 529" --list=.\listings\problem3-2.lst problem3-2.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARMex 00000000
+
+Symbol: ARMex
+   Definitions
+      At line 1 in file problem3-2.s
+   Uses
+      None
+Comment: ARMex unused
+Address1 0000004C
+
+Symbol: Address1
+   Definitions
+      At line 21 in file problem3-2.s
+   Uses
+      At line 4 in file problem3-2.s
+Comment: Address1 used once
+Arr1 00000024
+
+Symbol: Arr1
+   Definitions
+      At line 20 in file problem3-2.s
+   Uses
+      At line 5 in file problem3-2.s
+Comment: Arr1 used once
+end 00000018
+
+Symbol: end
+   Definitions
+      At line 13 in file problem3-2.s
+   Uses
+      None
+Comment: end unused
+finish 00000020
+
+Symbol: finish
+   Definitions
+      At line 17 in file problem3-2.s
+   Uses
+      At line 14 in file problem3-2.s
+Comment: finish used once
+loop 0000000C
+
+Symbol: loop
+   Definitions
+      At line 8 in file problem3-2.s
+   Uses
+      At line 15 in file problem3-2.s
+Comment: loop used once
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 3 in file problem3-2.s
+   Uses
+      None
+Comment: start unused
+7 symbols
+341 symbols in table

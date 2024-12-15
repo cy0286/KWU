@@ -1,0 +1,65 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ARMex, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         start
+    4 00000000         ;using n(n+10)
+    5 00000000 E59F0020        LDR              r0, Address1 ;load address1 int
+                                                            o r0
+    6 00000004 E3A01001        MOV              r1, #1      ;r1=1
+    7 00000008 E1A02081        MOV              r2, r1, LSL #1 ;r2=2
+    8 0000000C E1A02082        MOV              r2, r2, LSL #1 ;r2=4
+    9 00000010 E2822001        ADD              r2, r2, #1  ;r2=5
+   10 00000014 E1A02082        MOV              r2, r2, LSL #1 ;r2=10
+   11 00000018         
+   12 00000018 E0823002        ADD              r3, r2, r2  ;r3=20
+   13 0000001C E0040392        MUL              r4, r2, r3  ;r4=n(n+10)=200
+   14 00000020 E5804000        STR              r4, [r0]    ;store r4 into r0
+   15 00000024         
+   16 00000024 E1A0F00E        MOV              pc,lr       ;go to first instru
+                                                            ction
+   17 00000028         
+   18 00000028 00004000 
+                       Address1
+                               &                &4000       ;memory address
+   19 0000002C                 END                          ;Mark end of file
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\problem3-3-2.d -o.\objects\problem3-3-2.o -IC:\Keil_v5\ARM\R
+V31\INC -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine=
+"__UVISION_VERSION SETA 529" --list=.\listings\problem3-3-2.lst problem3-3-2.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARMex 00000000
+
+Symbol: ARMex
+   Definitions
+      At line 1 in file problem3-3-2.s
+   Uses
+      None
+Comment: ARMex unused
+Address1 00000028
+
+Symbol: Address1
+   Definitions
+      At line 18 in file problem3-3-2.s
+   Uses
+      At line 5 in file problem3-3-2.s
+Comment: Address1 used once
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 3 in file problem3-3-2.s
+   Uses
+      None
+Comment: start unused
+3 symbols
+335 symbols in table

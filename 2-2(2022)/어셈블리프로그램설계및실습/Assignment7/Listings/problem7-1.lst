@@ -1,0 +1,110 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000 00000000 
+                       cr      equ              0x00        ;define cr 0x00, 
+    2 00000000                 AREA             ARMex, CODE, READONLY
+    3 00000000                 ENTRY
+    4 00000000         start
+    5 00000000 E59F002C        LDR              r0, =string ;load string
+    6 00000004 E59F1024        LDR              r1, Address1 ;load address
+    7 00000008         
+    8 00000008         loop
+    9 00000008 E4D02001        LDRB             r2,[r0],#1  ;load into r2
+   10 0000000C E4C12001        STRB             r2,[r1],#1  ;store into r2
+   11 00000010 E3520000        CMP              r2, #cr     ;is it terminator?
+   12 00000014 1AFFFFFB        BNE              loop        ;no, read next char
+                                                            
+   13 00000018 0AFFFFFF        BEQ              endline     ;yes, stop loop
+   14 0000001C         
+   15 0000001C         endline
+   16 0000001C E1A0F00E        MOV              pc, lr      ;mark end of line
+   17 00000020         
+   18 00000020 48 65 6C 
+              6C 6F 2C 
+              20 57 6F 
+              72 6C 64 
+              00       string  DCB              "Hello, World", 0
+   19 0000002D 00 00 00 
+              00040000 Address1
+                               &                0x40000
+   20 00000034                 END
+              00000000 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\problem7-1.d -o.\objects\problem7-1.o -IC:\Keil_v5\ARM\RV31\
+INC -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__U
+VISION_VERSION SETA 529" --list=.\listings\problem7-1.lst problem7-1.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARMex 00000000
+
+Symbol: ARMex
+   Definitions
+      At line 2 in file problem7-1.s
+   Uses
+      None
+Comment: ARMex unused
+Address1 00000030
+
+Symbol: Address1
+   Definitions
+      At line 19 in file problem7-1.s
+   Uses
+      At line 6 in file problem7-1.s
+Comment: Address1 used once
+endline 0000001C
+
+Symbol: endline
+   Definitions
+      At line 15 in file problem7-1.s
+   Uses
+      At line 13 in file problem7-1.s
+Comment: endline used once
+loop 00000008
+
+Symbol: loop
+   Definitions
+      At line 8 in file problem7-1.s
+   Uses
+      At line 12 in file problem7-1.s
+Comment: loop used once
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 4 in file problem7-1.s
+   Uses
+      None
+Comment: start unused
+string 00000020
+
+Symbol: string
+   Definitions
+      At line 18 in file problem7-1.s
+   Uses
+      At line 5 in file problem7-1.s
+Comment: string used once
+6 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+cr 00000000
+
+Symbol: cr
+   Definitions
+      At line 1 in file problem7-1.s
+   Uses
+      At line 11 in file problem7-1.s
+Comment: cr used once
+1 symbol
+341 symbols in table
