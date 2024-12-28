@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\cy028\\OneDrive\\KWU\\\uACE0\uAE09C\uD504\\Project10\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ED6A91C8-532E-452C-9B15-C5ACF4566E0F}|Project10\\Project10.vcxproj|C:\\Users\\cy028\\OneDrive\\KWU\\\uACE0\uAE09C\uD504\\Project10\\Project10\\test2.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{ED6A91C8-532E-452C-9B15-C5ACF4566E0F}|Project10\\Project10.vcxproj|solutionrelative:Project10\\test2.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED6A91C8-532E-452C-9B15-C5ACF4566E0F}|Project10\\Project10.vcxproj|C:\\Users\\cy028\\OneDrive\\KWU\\\uACE0\uAE09C\uD504\\Project10\\Project10\\test1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{ED6A91C8-532E-452C-9B15-C5ACF4566E0F}|Project10\\Project10.vcxproj|solutionrelative:Project10\\test1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "test2.c",
+              "DocumentMoniker": "C:\\Users\\cy028\\OneDrive\\KWU\\\uACE0\uAE09C\uD504\\Project10\\Project10\\test2.c",
+              "RelativeDocumentMoniker": "Project10\\test2.c",
+              "ToolTip": "C:\\Users\\cy028\\OneDrive\\KWU\\\uACE0\uAE09C\uD504\\Project10\\Project10\\test2.c",
+              "RelativeToolTip": "Project10\\test2.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-12-28T15:59:00.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "test1.c",
+              "DocumentMoniker": "C:\\Users\\cy028\\OneDrive\\KWU\\\uACE0\uAE09C\uD504\\Project10\\Project10\\test1.c",
+              "RelativeDocumentMoniker": "Project10\\test1.c",
+              "ToolTip": "C:\\Users\\cy028\\OneDrive\\KWU\\\uACE0\uAE09C\uD504\\Project10\\Project10\\test1.c",
+              "RelativeToolTip": "Project10\\test1.c",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-12-28T15:58:21.246Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
