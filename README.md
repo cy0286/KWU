@@ -54,6 +54,9 @@
 #### 컴퓨터구조
 - Verilog, assembler, Logisim, Icarus, GTKWave
 
+#### 객체지향프로그래밍
+- C++
+
 ---
 
 ### 3학년 2학기 (2023)
