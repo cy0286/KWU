@@ -6,20 +6,20 @@
 #define TEL_LEN		20
 #define MAX_PERSON_NUM		100
 
-typedef struct _Person
+typedef struct _Person // 사용자의 정보를 저장하는 구조체
 {
 	char name[NAME_LEN];
 	char number[NUM_LEN];
 	char phone[TEL_LEN];
 } Person;
 
-void ShowMenu(void);
-void InsertTelInfo(Person*, int*);
-void RemoveTelInfo(Person*, int*);
-void SearchTelInfo(Person*, int);
-void PrintAll(Person*, int);
-void LoadData(Person*, int*);
-void StoreData(Person*, int);
+void ShowMenu(void); // 메뉴 출력 
+void InsertTelInfo(Person*, int*); // 이름, 학번, 전화번호 데이터 읽음 
+void RemoveTelInfo(Person*, int*); // 학번으로 데이터를 검색하여 데이터가 있을 경우 해당 학생 정보를 삭제함
+void SearchTelInfo(Person*, int); // 학번으로 데이터를 검색하여 데이터가 있을 경우 해당 학생 정보를 출력함
+void PrintAll(Person*, int); // 전체 데이터 출력 
+void LoadData(Person*, int*); // 텍스트 파일로부터 데이터 읽음 
+void StoreData(Person*, int); // 텍스트 파일로 전체 데이터 저장
 
 int main(void)
 {
@@ -64,7 +64,7 @@ int main(void)
 	return 0;
 }
 
-void ShowMenu(void)
+void ShowMenu(void) // 메뉴 선택
 {
 	printf("\n---------Menu--------\n");
 	printf("0. Data Load\n");
@@ -78,7 +78,7 @@ void ShowMenu(void)
 
 void InsertTelInfo(Person* parr, int* pnum)
 {
-	char name[NAME_LEN], number[NUM_LEN], phone[TEL_LEN];
+	char name[NAME_LEN], number[NUM_LEN], phone[TEL_LEN];  // 사용자의 정보를 삽입하는 함수 
 	printf("[ INSERT ] \n");
 	printf("Input Name : "); scanf("%s", name);
 	printf("Input Student ID : "); scanf("%s", number);
@@ -92,7 +92,7 @@ void InsertTelInfo(Person* parr, int* pnum)
 	printf("--------> Data Inserted......\n");
 }
 
-void RemoveTelInfo(Person* parr, int* pnum)
+void RemoveTelInfo(Person* parr, int* pnum) // 사용자의 정보를 삭제하는 함수
 {
 	int i, j;
 	char number[NUM_LEN];
@@ -115,7 +115,7 @@ void RemoveTelInfo(Person* parr, int* pnum)
 	printf("-------> Data Not Found......\n");
 }
 
-void SearchTelInfo(Person* parr, int num)
+void SearchTelInfo(Person* parr, int num) // 사용자의 정보를 검색하는 함수 
 {
 	int i;
 	char number[NUM_LEN];
@@ -134,7 +134,7 @@ void SearchTelInfo(Person* parr, int num)
 	printf("--------> Data Not Found......\n");
 }
 
-void PrintAll(Person* parr, int num)
+void PrintAll(Person* parr, int num) // 저장된 모든 정보를 출력하는 함수
 {
 	int i;
 	printf("[ Print All Data ] \n");
@@ -159,7 +159,7 @@ void LoadData(Person* parr, int* pnum)
 	}
 }
 
-void StoreData(Person* parr, int num)
+void StoreData(Person* parr, int num) // 저장하는 함수
 {
 	int i;
 	FILE* file = fopen("data.txt", "wt");
