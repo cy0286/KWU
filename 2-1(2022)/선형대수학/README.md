@@ -15,4 +15,10 @@
 - 행렬 원소별 거듭제곱
   
 2. INVERSE PROBLEM을 통한 사람 신체의 주파수 흡수율 추정
-- 20개의 서로 다른 주파수 신호를 사람의 손에 전달하고, 그 신호들이 신체를 통과한 후 다른 부위인 발에서 측정되는 결과를 바탕으로, 신체의 각 주파수 성분에 대한 흡수율을 추정하는 문제입니다. 주어진 선형 역문제 방법을 이용해 MATLAB 코드를 작성하여 20개의 흡수율을 계산하고, inv() 함수와 비교하여 결과를 분석하는 것
+- 주어진 20개의 사인파 신호를 사람의 신체 일부(손)에 입력하고, 다른 신체 부위(발)에서 측정된 복합 신호를 통해 신체의 흡수율(absorption rates) 계산
+- linear inverse problem을 사용해 흡수율을 계산하고 MATLAB 내장 함수 inv() 함수와 결과 비교 
+- slu.m : 행렬 AAA에 대해 부분 pivoting을 포함한 LU 분해를 수행해 PPP, LLL, UUU 행렬을 반환하는 코드
+- slv.m : slu.m에서 계산된 PPP, LLL, UUU를 사용해 선형 방정식을 푸는 코드
+  * P 행렬 : Permutation Matrix
+  * L 행렬 : Lower Triangular Matrix
+  * U 행렬 : Upper Triangular Matrix
