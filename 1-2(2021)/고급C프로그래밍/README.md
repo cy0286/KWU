@@ -25,7 +25,7 @@
 5.
 - 학생 정보 관리 프로그램 프로젝트
 
-## Student Information Management Program
+#### Student Information Management Program
 이 프로그램을 통해 이름, 학생 ID, 전화번호 등 학생 정보를 관리할 수 있다. 텍스트 파일('data.txt')을 사용하여 데이터를 로드하고 저장한다. 아래는 데이터 유무에 따른 사용 가능한 기능과 동작이다.
 
 | **Function**            | **Description**                                                                                | **When Data Exists**                                                                                        | **When Data Does Not Exist**                                                             |
@@ -37,7 +37,7 @@
 | **Print All**            | Print all stored student information.                                                         | ![image](https://github.com/user-attachments/assets/139fd6ba-026e-4716-810e-41ace71ca73a)                                                                                                              |
 | **Data Save & Exit**     | Save all student data to `data.txt` before exiting the program.                               | ![image](https://github.com/user-attachments/assets/6240faad-4fb0-4ffe-a9d7-35282a0b7abd)                                                                                                              |
 
-### Program Flow
+#### Program Flow
 
 1. The program first attempts to load existing data from `data.txt`.
 2. You can choose from the following actions:
